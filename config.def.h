@@ -66,6 +66,20 @@ static int winsize[] = { 800, 600 };
 static WebKitFindOptions findopts = WEBKIT_FIND_OPTIONS_CASE_INSENSITIVE |
                                     WEBKIT_FIND_OPTIONS_WRAP_AROUND;
 
+/* Webkit default features */
+static Bool enablescrollbars      = TRUE;
+static Bool enablespatialbrowsing = TRUE;
+static Bool enablediskcache       = TRUE;
+static int diskcachebytes         = 5 * 1024 * 1024;
+static Bool enableplugins         = TRUE;
+static Bool enablescripts         = TRUE;
+static Bool enableinspector       = TRUE;
+static Bool enablestyle           = TRUE;
+static Bool loadimages            = TRUE;
+static Bool hidebackground        = FALSE;
+static Bool allowgeolocation      = TRUE;
+
+#define HOMEPAGE "https://www.google.com/"
 #define PROMPT_GO   "Go:"
 #define PROMPT_FIND "Find:"
 
