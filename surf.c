@@ -535,6 +535,8 @@ loaduri(Client *c, const Arg *a)
 	} else if (!stat(uri, &st) && (path = realpath(uri, NULL))) {
 		url = g_strdup_printf("file://%s", path);
 		free(path);
+	} else if (uri[0] == ' ') {
+		url = g_strdup_printf("%s%s", searchengine, uri+1);
 	} else {
 		url = g_strdup_printf("http://%s", uri);
 	}
@@ -547,7 +549,6 @@ loaduri(Client *c, const Arg *a)
 		webkit_web_view_load_uri(c->view, url);
 		updatetitle(c);
 	}
-
 	g_free(url);
 }
 
@@ -1285,7 +1286,6 @@ winevent(GtkWidget *w, GdkEvent *e, Client *c)
 	default:
 		break;
 	}
-
 	return FALSE;
 }
 

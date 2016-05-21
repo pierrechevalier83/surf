@@ -79,6 +79,8 @@ static Bool loadimages            = TRUE;
 static Bool hidebackground        = FALSE;
 static Bool allowgeolocation      = TRUE;
 
+static char* searchengine = "https://www.google.com/?q=";
+
 #define HOMEPAGE "https://www.google.com/"
 #define PROMPT_GO   "Go:"
 #define PROMPT_FIND "Find:"
