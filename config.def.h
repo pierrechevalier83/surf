@@ -35,7 +35,10 @@ static Bool loadimages            = TRUE;
 static Bool hidebackground        = FALSE;
 static Bool allowgeolocation      = TRUE;
 
+static char* searchengine = "https://www.google.com/?q=";
+
 #define HOMEPAGE "https://www.google.com/"
+
 #define SETPROP(p, q) { \
 	.v = (char *[]){ "/bin/sh", "-c", \
 	     "prop=\"`xprop -id $2 $0 " \

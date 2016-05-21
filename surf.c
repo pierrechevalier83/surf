@@ -839,6 +839,8 @@ loaduri(Client *c, const Arg *arg)
 		rp = realpath(uri, NULL);
 		u = g_strdup_printf("file://%s", rp);
 		free(rp);
+	} else if (uri[0] == ' ') {
+		u = g_strdup_printf("%s%s", searchengine, uri+1);
 	} else {
 		u = g_strrstr(uri, "://") || g_str_has_prefix(uri, "about:") ? g_strdup(uri)
 		    : g_strdup_printf("http://%s", uri);
