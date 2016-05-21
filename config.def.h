@@ -55,6 +55,10 @@ static UriParameters uriparams[] = {
 	  [Plugins]    = { { .i = 0 }, 1 },
 	}, },
 };
+static Bool kioskmode       = FALSE; /* Ignore shortcuts */
+static Bool showindicators  = FALSE;  /* Show indicators in window title */
+static Bool zoomto96dpi     = TRUE;  /* Zoom pages to always emulate 96dpi */
+static Bool runinfullscreen = FALSE; /* Run in fullscreen mode by default */
 
 /* default window size: width, height */
 static int winsize[] = { 800, 600 };
