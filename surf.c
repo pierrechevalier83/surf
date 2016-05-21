@@ -1769,6 +1769,9 @@ main(int argc, char *argv[])
 	default:
 		usage();
 	} ARGEND;
+	#ifdef HOMEPAGE
+		arg.v = HOMEPAGE;
+	#endif
 	if (argc > 0)
 		arg.v = argv[0];
 
